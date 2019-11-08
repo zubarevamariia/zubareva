@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+void delete_duplicates(int n)
+{
+	int i;
+	int Array[n];
+	for(i=0;i<n;++i)
+	{
+		cin>>Array[i];	
+	}
+	bool povtor=true;
+	for(i=0; i<n;++i)
+	{
+	
+		for(int x=0;x<i;++x)
+		{
+			if(Array[i]==Array[x])
+			{
+				povtor=false;
+			}
+		}
+		if(povtor==true)
+		{
+			cout<<Array[i]<<" ";
+		}
+		povtor=true;
+	}
+	
+}
+int main()
+{
+	int n ;
+	cin>>n;
+	delete_duplicates (n);
+	return 0;
+}

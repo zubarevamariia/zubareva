@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int gcd(int a, int b) {
+  while (b != 0)  
+  {
+    int t = b;
+    b = a % b;
+    a = t;
+  }
+  return a;
+}
+void proper_fraction(int n)
+{ 
+	int d=0;
+	for(int i = 1; i<n; ++i)
+	{ 
+		if(gcd(i , n)==1)
+		{
+	        ++d;
+		}
+	}
+	cout<<d*2;
+}
+int main()
+{
+	int n;
+	cin>>n;
+	proper_fraction (n);
+	return 0;
+}s
