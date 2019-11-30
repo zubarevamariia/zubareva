@@ -1,0 +1,34 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+void Print(int a)
+{
+   if (a)
+   {
+      cout << (a%10);
+      Print(a/10);
+   }
+}
+int main() 
+{
+    int n,y;
+    cin>>n;
+    for( int i=1; i<10; i++)
+    {
+    	for(int d=0; d<pow(10,n/2+n%2-1);d++)
+    	{
+    		cout<<pow(10,n/2+n%2-1)*i+d;
+    		int x=pow(10,n/2+n%2-1)*i+d;
+    		if (n%2==1)
+    		{
+    			y=x/10;
+    		} else
+    		{
+    			y=x;
+    		}
+    	Print(y);
+    	cout<<"\n";
+    	}
+    }
+	return 0;
+}
