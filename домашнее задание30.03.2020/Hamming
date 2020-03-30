@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int Hamming(string clovo1, string clovo2)
+{
+int i=0;
+if(clovo1.size()!=clovo2.size())
+{
+return 0;
+}
+for(int j=0;j<clovo1.size();++j)
+{
+if(clovo1[j]!=clovo2[j])
+{
+++i;
+}
+}
+return i;
+
+}
+int main() {
+string clovo1;
+string clovo2;
+cin>>clovo1>>clovo2;
+cout<<Hamming(clovo1,clovo2);
+return 0;
+}
