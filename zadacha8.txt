@@ -27,4 +27,4 @@ int main()
 	cin>>n;
 	proper_fraction (n);
 	return 0;
-}s
+}
